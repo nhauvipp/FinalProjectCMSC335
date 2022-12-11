@@ -1,4 +1,4 @@
-﻿# FinalProjectCMSC335
+﻿# Final Project CMSC335
 
 1. Team Members: Huu Nguyen (Directory Id: 117801644)
 
