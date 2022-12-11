@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Remove Applicants</title>
+</head>
+
+<body>
+    <h1>Removing All Applicants</h1>
+    <form onsubmit="if(!confirm('Are you sure you want to remove all applications?')) {return false;}" action="<%- removeLink %>" method="post">
+		<input type="submit" value="Remove all applicants"/>
+        <hr><br>
+        <a href="<%- app %>">HOME</a>
+
+    </form>
+
+</body>
+
+</html>

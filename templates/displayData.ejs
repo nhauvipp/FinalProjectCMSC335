@@ -1,0 +1,28 @@
+<!doctype html> 
+<html lang="en"> 
+	 
+<head> 
+	<meta charset="utf-8" /> 
+	<title>Applicants Confirmation</title> 
+</head> 
+	 
+<body> 
+	<h1>Applicants Data</h1> 
+	<div> 
+	    <strong>Name: </strong><%- name %><br> 
+	    <strong>Email Address: </strong><%- email %><br> 
+	    <strong>Group: </strong><%- group %><br> 
+	    <strong>Background Information: </strong><br><%- background %><br> 
+	    <hr> 
+	    <p id="time"></p> 
+	    <hr><br> 
+	    <a href="<%- display %>">HOME</a> 
+	</div> 
+	 
+	<script> 
+	    const d = new Date(); 
+	    document.getElementById("time").innerHTML = "Task completed at " + d; 
+	</script> 
+</body> 
+	 
+</html> 

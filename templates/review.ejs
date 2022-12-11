@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Lookup Group</title>
+</head>
+
+<body>
+    <h1>Display Students Based on Group</h1>
+    <form action="<%- reviewLink %>" method="post">
+        <fieldset>
+            <strong><label>Choose a group to display all applicants: </label></strong>
+            <select name="group">
+                <option value="Group_A">Group A</option>
+                <option value="Group_B">Group B</option>
+                <option value="Group_C">Group C</option>
+            </select>
+            <br><br>
+        </fieldset>
+        <br>
+        <input type="reset" />
+		<input type="submit" value="Submit Application"/>
+        <hr>
+        <a href="<%- app %>">HOME</a>
+
+    </form>
+
+</body>
+
+</html>

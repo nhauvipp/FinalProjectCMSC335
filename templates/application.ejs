@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Application</title>
+</head>
+
+<body>
+    <h1>Application</h1>
+    <form onsubmit='if(!confirm("Are you sure you want to submit your application?\nYou will not be able to change your information once submitted.")) {return false;}' action="<%- appLink %>" method="post">
+        <fieldset>
+            <strong><label>Name: <input type="text" name="name"/></label></strong>
+            <strong><label>Email Address: <input type="email" name="email"></label></strong><br><br>
+            <strong><label>Group Choice: </label></strong>
+            <select name="group">
+                <option value="Group_A">Group A</option>
+                <option value="Group_B">Group B</option>
+                <option value="Group_C">Group C</option>
+            </select>
+            <br><br>
+            <strong><label>Background Information:</label></strong><br>
+            <textarea rows="5" cols="80" name="backgroundInformation"></textarea>
+        </fieldset>
+        <br>
+        <input type="reset" />
+		<input type="submit" value="Submit Application"/>
+        <hr><br>
+        <a href="<%- app %>">HOME</a>
+
+    </form>
+
+</body>
+
+</html>

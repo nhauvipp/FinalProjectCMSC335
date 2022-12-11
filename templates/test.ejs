@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Check Weather</title>
+</head>
+
+<body>
+    <h1>Check Weather</h1>
+    <form action="<%- weatherLink %>" method="post">
+        <fieldset>
+            <strong><label>Location: <input type="text" name="weather"></label></strong><br>Format: [city,state], [lat,long], [city, country], [US / CA postal code].<br>
+        </fieldset>
+        <br>
+        <input type="reset" />
+		<input type="submit" value="Submit "/>
+        <hr>
+        <a href="<%- app %>">HOME</a>
+
+    </form>
+
+</body>
+
+</html>
