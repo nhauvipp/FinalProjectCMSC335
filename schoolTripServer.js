@@ -6,7 +6,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const { render } = require("ejs");
 const axios = require("axios");
-var portNumber;
+var portNumber = 5000;
 
 require("dotenv").config({ path: path.resolve(__dirname, 'credentialsDontPost/.env') }) 
 
@@ -76,7 +76,8 @@ app.post("/check", (request, res) => {
             tempFa: response.data.response.ob.tempF,
             tempCe: response.data.response.ob.tempC,
             wind: response.data.response.ob.windSpeedMPH,
-            humidity: response.data.response.ob.humidity
+            humidity: response.data.response.ob.humidity,
+            display: `http://localhost:${portNumber}`
         }
         res.render("testResult", variable);
       }).catch(function (error) {
@@ -85,7 +86,8 @@ app.post("/check", (request, res) => {
             tempFa: "Data Not Found",
             tempCe: "Data Not Found",
             wind: "Data Not Found",
-            humidity: "Data Not Found"
+            humidity: "Data Not Found",
+            display: `http://localhost:${portNumber}`
         }
         res.render("testResult", variable);
       });
@@ -199,8 +201,8 @@ app.post("/adminRemove", (request, response) => {
     main().catch(console.error);
 });
 
-app.listen(process.argv[2]);
-portNumber = process.argv[2];
+app.listen(portNumber);
+//portNumber = process.argv[2];
 console.log(`Web server is running at http://localhost:${portNumber}`);
 
 process.stdin.setEncoding("utf8");
