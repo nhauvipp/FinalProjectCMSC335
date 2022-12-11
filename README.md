@@ -8,7 +8,6 @@ to display all students based on group and remove all students application from 
 Lastly, user can enter a location to display the weather forecast so the school can make all the
 necessary preparation before the trip. 
 Run "npm i" to install all the necessary dependencies
-Running the application by start the server with "node schoolTripServer.js PORT_NUMBER HERE"
 Running the application by start the server with "node schoolTripServer.js"
 
 3. API Links: Aeris Weather API (https://rapidapi.com/aerisweather-aerisweather/api/aerisweather1/)
