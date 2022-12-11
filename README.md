@@ -7,6 +7,6 @@ information into the database that categorize based on group for school trip. Us
 to display all students based on group and remove all students application from the database. 
 Lastly, user can enter a location to display the weather forecast so the school can make all the
 necessary preparation before the trip. 
-Running the application by start the server with "node schoolTripServer.js PORT_NUMBER HERE"
+Running the application by start the server with "node schoolTripServer.js"
 
 3. API Links: Aeris Weather API (https://rapidapi.com/aerisweather-aerisweather/api/aerisweather1/)
