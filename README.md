@@ -10,4 +10,7 @@ necessary preparation before the trip.
 Run "npm i" to install all the necessary dependencies
 Running the application by start the server with "node schoolTripServer.js"
 
-3. API Links: Aeris Weather API (https://rapidapi.com/aerisweather-aerisweather/api/aerisweather1/)
+3. API Links: Aeris Weather API (https://rapidapi.com/aerisweather-aerisweather/api/aerisweather1/) use to 
+get the weather information based on the location that the user entered.
+
+4. YouTube Demo:
