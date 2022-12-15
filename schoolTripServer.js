@@ -29,7 +29,7 @@ app.get("/check", (request, response) => {
         weatherLink: `http://localhost:${portNumber}/check`,
         app: `http://localhost:${portNumber}`
     }
-    response.render("test", variable);
+    response.render("weatherInfo", variable);
 });
 
 app.get("/apply", (request, response) => {
@@ -79,7 +79,7 @@ app.post("/check", (request, res) => {
             humidity: response.data.response.ob.humidity,
             display: `http://localhost:${portNumber}`
         }
-        res.render("testResult", variable);
+        res.render("weatherDisplay", variable);
       }).catch(function (error) {
         const variable = {
             info: "Data Not Found",
@@ -89,7 +89,7 @@ app.post("/check", (request, res) => {
             humidity: "Data Not Found",
             display: `http://localhost:${portNumber}`
         }
-        res.render("testResult", variable);
+        res.render("weatherDisplay", variable);
       });
 
 });
