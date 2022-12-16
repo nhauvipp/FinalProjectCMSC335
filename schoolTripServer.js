@@ -207,11 +207,9 @@ app.post("/adminRemove", (request, response) => {
 });
 
 app.listen(portNumber);
-
-//portNumber = process.argv[2];
 console.log(`Web server is running at http://localhost:${portNumber}`);
 
-/*process.stdin.setEncoding("utf8");
+process.stdin.setEncoding("utf8");
 
 const prompt = "Stop to shutdown the server: ";
 process.stdout.write(prompt);
@@ -228,4 +226,4 @@ process.stdin.on("readable", function () {
     process.stdout.write(prompt);
     process.stdin.resume();
   }
-});*/
+});
