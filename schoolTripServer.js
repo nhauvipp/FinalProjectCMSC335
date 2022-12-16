@@ -6,6 +6,8 @@ const app = express();
 const bodyParser = require("body-parser");
 const { render } = require("ejs");
 const axios = require("axios");
+
+
 var portNumber = 5000;
 
 require("dotenv").config({ path: path.resolve(__dirname, 'credentialsDontPost/.env') }) 
@@ -59,8 +61,11 @@ app.get("/adminRemove", (request, response) => {
 
 app.use(bodyParser.urlencoded({extended:false}));
 
-app.post("/check", (request, res) => {
+app.post("/check", (request, response) => {
     const {weather} = request.body;
+
+
+
     const options = {
         method: 'GET',
         url: `https://aerisweather1.p.rapidapi.com/observations/${weather}`,
@@ -70,17 +75,17 @@ app.post("/check", (request, res) => {
         }
       };
       
-      axios.request(options).then(function (response) {
+    axios.request(options).then(function (result) {
         const variable = {
-            info: response.data.response.ob.weather,
-            tempFa: response.data.response.ob.tempF,
-            tempCe: response.data.response.ob.tempC,
-            wind: response.data.response.ob.windSpeedMPH,
-            humidity: response.data.response.ob.humidity,
+            info: result.data.response.ob.weather,
+            tempFa: result.data.response.ob.tempF,
+            tempCe: result.data.response.ob.tempC,
+            wind: result.data.response.ob.windSpeedMPH,
+            humidity: result.data.response.ob.humidity,
             display: `http://localhost:${portNumber}`
         }
-        res.render("weatherDisplay", variable);
-      }).catch(function (error) {
+        response.render("weatherDisplay", variable);
+    }).catch(function (error) {
         const variable = {
             info: "Data Not Found",
             tempFa: "Data Not Found",
@@ -89,8 +94,8 @@ app.post("/check", (request, res) => {
             humidity: "Data Not Found",
             display: `http://localhost:${portNumber}`
         }
-        res.render("weatherDisplay", variable);
-      });
+        response.render("weatherDisplay", variable);
+    });
 
 });
 
