@@ -12,6 +12,7 @@ necessary preparation before the trip.
 *** To run locally:
 - Run "npm i" to install all the necessary dependencies
 - Running the application by start the server with "node ."
+- Deloying online using Cyclic: https://scary-rose-coati.cyclic.app
 
 3. API Links: Aeris Weather API (https://rapidapi.com/aerisweather-aerisweather/api/aerisweather1/) use to 
 get the weather information based on the location that the user entered.
