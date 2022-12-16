@@ -9,6 +9,7 @@ information into the database that categorize based on group for school trip.
 application from the database. 
 - User can enter a location to display the weather forecast so the school can make all the
 necessary preparation before the trip. 
+
 *** To run locally:
 - Run "npm i" to install all the necessary dependencies
 - Running the application by start the server with "node ."
